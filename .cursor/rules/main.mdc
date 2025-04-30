@@ -1,0 +1,16 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Technical requirements:
+- Use Tailwind CSS ONLY for styling (via CDN)
+- Incorporate Google Fonts for typography (specifically [font name(s)])
+- All libraries must be loaded via CDN links (NO local files)
+- Ensure the page is fully responsive and works on mobile devices
+- Keep the entire codebase (HTML, CSS, JS) in a SINGLE file
+- Structure HTML semantically with proper heading hierarchy
+- Add appropriate comments to explain code sections
+
+## Text requirements:
+- Use only Ukrainian language
