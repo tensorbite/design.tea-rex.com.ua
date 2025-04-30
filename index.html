@@ -151,6 +151,36 @@
             position: relative;
             padding: 0 15px;
         }
+        /* New styles for copyable color values */
+        .color-value {
+            position: relative;
+            display: table-row;
+        }
+        .color-value::before {
+            content: attr(data-label);
+            font-weight: 700;
+            color: #525252;
+            display: table-cell;
+            padding-right: 8px;
+            white-space: nowrap;
+            text-align: right;
+            width: 1%;
+        }
+        .color-value code {
+            display: table-cell;
+            text-align: left;
+        }
+        .color-values-container {
+            display: table;
+            width: 100%;
+        }
+        code {
+            background-color: #F8F8F8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
     </style>
     <script>
         // Intersection Observer for section highlighting
@@ -209,47 +239,59 @@
             <h2 class="text-2xl mb-6 font-bold">Кольори</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                    <div class="color-box" style="background-color: #FC4E4D;"></div>
+                <div class="text-center">
+                    <div class="color-box" style="background-color: #FC4E4D; margin: 0 auto;"></div>
                     <p class="font-bold">Основний колір бренду</p>
-                    <p class="text-dark-gray">HEX: #FC4E4D</p>
-                    <p class="text-dark-gray text-sm">RGB: 252, 78, 77</p>
-                    <p class="text-dark-gray text-sm">CMYK: 0, 69, 69, 1</p>
+                    <div class="color-values-container mx-auto" style="max-width: 200px;">
+                        <p class="text-dark-gray text-sm color-value" data-label="HEX"><code>#FC4E4D</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="RGB"><code>252, 78, 77</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="CMYK"><code>0, 69, 69, 1</code></p>
+                    </div>
                 </div>
-                <div>
-                    <div class="color-box" style="background-color: #FD6B6A;"></div>
+                <div class="text-center">
+                    <div class="color-box" style="background-color: #FD6B6A; margin: 0 auto;"></div>
                     <p class="font-bold">Світлий альтернативний колір</p>
-                    <p class="text-dark-gray">HEX: #FD6B6A</p>
-                    <p class="text-dark-gray text-sm">RGB: 253, 107, 106</p>
-                    <p class="text-dark-gray text-sm">CMYK: 0, 58, 58, 1</p>
+                    <div class="color-values-container mx-auto" style="max-width: 200px;">
+                        <p class="text-dark-gray text-sm color-value" data-label="HEX"><code>#FD6B6A</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="RGB"><code>253, 107, 106</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="CMYK"><code>0, 58, 58, 1</code></p>
+                    </div>
                 </div>
-                <div>
-                    <div class="color-box" style="background-color: #EC3F3E;"></div>
+                <div class="text-center">
+                    <div class="color-box" style="background-color: #EC3F3E; margin: 0 auto;"></div>
                     <p class="font-bold">Темний альтернативний колір</p>
-                    <p class="text-dark-gray">HEX: #EC3F3E</p>
-                    <p class="text-dark-gray text-sm">RGB: 236, 63, 62</p>
-                    <p class="text-dark-gray text-sm">CMYK: 0, 73, 74, 7</p>
+                    <div class="color-values-container mx-auto" style="max-width: 200px;">
+                        <p class="text-dark-gray text-sm color-value" data-label="HEX"><code>#EC3F3E</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="RGB"><code>236, 63, 62</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="CMYK"><code>0, 73, 74, 7</code></p>
+                    </div>
                 </div>
-                <div>
-                    <div class="color-box" style="background-color: #000000;"></div>
+                <div class="text-center">
+                    <div class="color-box" style="background-color: #000000; margin: 0 auto;"></div>
                     <p class="font-bold">Чорний колір</p>
-                    <p class="text-dark-gray">HEX: #000000</p>
-                    <p class="text-dark-gray text-sm">RGB: 0, 0, 0</p>
-                    <p class="text-dark-gray text-sm">CMYK: 0, 0, 0, 100</p>
+                    <div class="color-values-container mx-auto" style="max-width: 200px;">
+                        <p class="text-dark-gray text-sm color-value" data-label="HEX"><code>#000000</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="RGB"><code>0, 0, 0</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="CMYK"><code>0, 0, 0, 100</code></p>
+                    </div>
                 </div>
-                <div>
-                    <div class="color-box" style="background-color: #525252;"></div>
+                <div class="text-center">
+                    <div class="color-box" style="background-color: #525252; margin: 0 auto;"></div>
                     <p class="font-bold">Темно-сірий</p>
-                    <p class="text-dark-gray">HEX: #525252</p>
-                    <p class="text-dark-gray text-sm">RGB: 82, 82, 82</p>
-                    <p class="text-dark-gray text-sm">CMYK: 0, 0, 0, 68</p>
+                    <div class="color-values-container mx-auto" style="max-width: 200px;">
+                        <p class="text-dark-gray text-sm color-value" data-label="HEX"><code>#525252</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="RGB"><code>82, 82, 82</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="CMYK"><code>0, 0, 0, 68</code></p>
+                    </div>
                 </div>
-                <div>
-                    <div class="color-box" style="background-color: #F8F8F8;"></div>
+                <div class="text-center">
+                    <div class="color-box" style="background-color: #F8F8F8; margin: 0 auto;"></div>
                     <p class="font-bold">Світло-сірий</p>
-                    <p class="text-dark-gray">HEX: #F8F8F8</p>
-                    <p class="text-dark-gray text-sm">RGB: 248, 248, 248</p>
-                    <p class="text-dark-gray text-sm">CMYK: 0, 0, 0, 3</p>
+                    <div class="color-values-container mx-auto" style="max-width: 200px;">
+                        <p class="text-dark-gray text-sm color-value" data-label="HEX"><code>#F8F8F8</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="RGB"><code>248, 248, 248</code></p>
+                        <p class="text-dark-gray text-sm color-value" data-label="CMYK"><code>0, 0, 0, 3</code></p>
+                    </div>
                 </div>
             </div>
 
