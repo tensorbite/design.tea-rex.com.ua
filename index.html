@@ -298,49 +298,102 @@
                 </ol>
             </div>
         </section>
-        
-        <!-- Приклад елементів дизайну -->
+
+        <!-- Вимоги до текстів -->
         <section class="mb-12">
-            <h2 class="text-2xl mb-6 font-bold">Приклад елементів дизайну</h2>
+            <h2 class="text-2xl mb-6 font-bold">Вимоги до текстів</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl mb-4 font-bold">Кнопка дії</h3>
-                    <button class="bg-brand-primary hover:bg-brand-dark text-white py-2 px-4 rounded banner">
-                        Замовити чай
-                    </button>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl mb-4 font-bold">Заголовок продукту</h3>
-                    <h2 class="text-xl font-bold mb-2">Шу Пуер "Золота квітка"</h2>
-                    <p class="text-dark-gray">Зрілий, ароматний чай із глибоким смаком</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl mb-4 font-bold">Картка товару</h3>
-                    <div class="bg-light-gray p-4 rounded">
-                        <div class="bg-white mb-3" style="height: 120px; display: flex; align-items: center; justify-content: center;">
-                            <span class="text-dark-gray">Зображення товару</span>
-                        </div>
-                        <h4 class="font-bold mb-1">Улун Те Гуань Інь</h4>
-                        <p class="text-dark-gray text-sm mb-3">Класичний китайський улун</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold">350 грн</span>
-                            <button class="bg-brand-dark text-white py-1 px-3 rounded text-sm">В кошик</button>
-                        </div>
+                <!-- Ліва колонка -->
+                <div class="space-y-6">
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl mb-4 font-bold">Загальні принципи</h3>
+                        <ul class="list-disc pl-6">
+                            <li class="mb-2">Використовуйте ключові слова органічно, без надмірного вживання</li>
+                            <li class="mb-2">Описуйте емоції, стани та відчуття, які викликає чай</li>
+                            <li class="mb-2">Використовуйте фреймворк AFABA (attention, features, advantages, benefits, action)</li>
+                            <li class="mb-2">Уникайте релігійних свят та політичних тем</li>
+                            <li class="mb-2">Не згадуйте вплив чаю на здоров'я та не обіцяйте лікувальних властивостей</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl mb-4 font-bold">SEO вимоги</h3>
+                        <ul class="list-disc pl-6">
+                            <li class="mb-2">Унікальність: понад 85%</li>
+                            <li class="mb-2">Водність: від 50% до 65%</li>
+                            <li class="mb-2">Співвідношення унікальних слів до загальної кількості: понад 0,7</li>
+                            <li class="mb-2">Класична тошнота за словом: до 3%</li>
+                            <li class="mb-2">Академічна тошнота: до 9%</li>
+                            <li class="mb-2">Бажана довжина речень: понад 8 слів</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl mb-4 font-bold">Тексти для сторінок продуктів</h3>
+                        <p class="mb-2">Структура опису продукту:</p>
+                        <ol class="list-decimal pl-6">
+                            <li class="mb-2">Стислий опис (до 10 речень)</li>
+                            <li class="mb-2">Смаковий профіль</li>
+                            <li class="mb-2">Особливості</li>
+                            <li class="mb-2">Приготування</li>
+                            <li class="mb-2">Зберігання</li>
+                        </ol>
                     </div>
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl mb-4 font-bold">Інформаційний блок</h3>
-                    <div class="border-l-4 border-brand-primary pl-4">
-                        <h4 class="font-bold mb-2">Зберігання чаю</h4>
-                        <p class="text-dark-gray text-sm">Зберігайте чай у сухому, темному місці, подалі від сильних запахів. Ідеальна температура: 18-22°C.</p>
+
+                <!-- Права колонка -->
+                <div class="space-y-6">
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl mb-4 font-bold">Вимоги до HTML-розмітки</h3>
+                        <ul class="list-disc pl-6">
+                            <li class="mb-2">Використовуйте мінімальний набір тегів без стилів та атрибутів</li>
+                            <li class="mb-2">Допустимі теги: h2, h3, h4, p, a, ul, ol, li, strong</li>
+                            <li class="mb-2">Не використовуйте таблиці</li>
+                            <li class="mb-2">Додавайте мета-теги внизу сторінки (title, description, keywords)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl mb-4 font-bold">Найменування товарів</h3>
+                        <p class="mb-2">Формат: <code class="bg-white p-1 rounded">{категорія} {назва} ({оригінальна назва}) {кількість} шт {вага} грам, {походження}</code></p>
+                        <ul class="list-disc pl-6">
+                            <li class="mb-2"><strong>Категорія</strong>: найточніша категорія товару (наприклад, "Червоний чай")</li>
+                            <li class="mb-2"><strong>Оригінальна назва</strong>: (опціонально) транслітерація китайської назви англійськими літерами</li>
+                            <li class="mb-2"><strong>Кількість</strong>: кількість порцій у товарі (не вказується для вагового товару або плитки/млинця пуеру)</li>
+                            <li class="mb-2"><strong>Походження</strong>: назва провінції походження</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl mb-4 font-bold">Лозунги та тексти для банерів</h3>
+                        <p class="mb-2">Акцентуйте увагу на емоціях, які викликає чай, наприклад:</p>
+                        <ul class="list-disc pl-6">
+                            <li class="mb-2">Спокій</li>
+                            <li class="mb-2">Зібраність</li>
+                            <li class="mb-2">Концентрація</li>
+                            <li class="mb-2">Задоволення</li>
+                            <li class="mb-2">Умиротворення</li>
+                            <li class="mb-2">Усамітнення</li>
+                            <li class="mb-2">Затишок</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-light-gray p-6 rounded-lg">
+                        <h3 class="text-xl mb-4 font-bold">Контент-план</h3>
+                        <p class="mb-2">Формат:</p>
+                        <ul class="list-disc pl-6">
+                            <li class="mb-2">Дата</li>
+                            <li class="mb-2">Заголовок</li>
+                            <li class="mb-2">Тема</li>
+                            <li class="mb-2">Опис</li>
+                            <li class="mb-2">Ключові слова, ідеї, рекомендації</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Футер -->
