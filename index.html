@@ -257,72 +257,70 @@
         <section id="fonts" class="mb-12">
             <h2 class="text-2xl mb-6 font-bold">Шрифти</h2>
             
-            <table>
-                <thead>
-                    <tr>
-                        <th>Використання</th>
-                        <th>Шрифт</th>
-                        <th>Розмір</th>
-                        <th>Вага</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Banner</strong></td>
-                        <td><span class="banner">Rubik Bold</span></td>
-                        <td>~</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Caption</strong></td>
-                        <td><span class="caption">Rubik Bold</span></td>
-                        <td>~</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>P</td>
-                        <td>Roboto Slab</td>
-                        <td>14px</td>
-                        <td>400</td>
-                    </tr>
-                    <tr>
-                        <td>H1</td>
-                        <td>Roboto Slab</td>
-                        <td>32px</td>
-                        <td>400</td>
-                    </tr>
-                    <tr>
-                        <td>H2</td>
-                        <td>Roboto Slab</td>
-                        <td>21px</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>H3</td>
-                        <td>Roboto Slab</td>
-                        <td>16px</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>H4</td>
-                        <td>Roboto Slab</td>
-                        <td>14px</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>H5</td>
-                        <td>Roboto Slab</td>
-                        <td>12px</td>
-                        <td>700</td>
-                    </tr>
-                    <tr>
-                        <td>H6</td>
-                        <td>Roboto Slab</td>
-                        <td>10px</td>
-                        <td>700</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Rubik Bold -->
+                <div class="bg-light-gray p-6 rounded-lg">
+                    <h3 class="text-xl mb-4 font-bold">
+                        <a href="https://fonts.google.com/specimen/Rubik" target="_blank" class="text-brand-primary hover:text-brand-dark">Rubik Bold</a>
+                    </h3>
+                    <div class="mt-4">
+                        <p class="text-sm text-dark-gray">Призначення: Заголовки, банери, відеоконтент</p>
+                        <p class="text-sm text-dark-gray">Вага: 700</p>
+                    </div>
+                    <hr class="border-t border-dark-gray mb-4 mt-2">
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">Використання: Banner</p>
+                            <p class="banner text-2xl">Tea-Rex Banner</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">Використання: Caption</p>
+                            <p class="caption text-lg">Tea-Rex Caption</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roboto Slab -->
+                <div class="bg-light-gray p-6 rounded-lg">
+                    <h3 class="text-xl mb-4 font-bold">
+                        <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank" class="text-brand-primary hover:text-brand-dark">Roboto Slab</a>
+                    </h3>
+                    <div class="mt-4">
+                        <p class="text-sm text-dark-gray">Призначення: Основний текст для абзаців та описів товарів.</p>
+                    </div>
+                    <hr class="border-t border-dark-gray mb-4 mt-2">
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">H1 - 32px, 400</p>
+                            <h1 style="font-size: 32px; font-weight: 400;">Заголовок першого рівня</h1>
+                        </div>
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">H2 - 21px, 700</p>
+                            <h2 style="font-size: 21px; font-weight: 700;">Заголовок другого рівня</h2>
+                        </div>
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">H3 - 16px, 700</p>
+                            <h3 style="font-size: 16px; font-weight: 700;">Заголовок третього рівня</h3>
+                        </div>
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">H4 - 14px, 700</p>
+                            <h4 style="font-size: 14px; font-weight: 700;">Заголовок четвертого рівня</h4>
+                        </div>
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">H5 - 12px, 700</p>
+                            <h5 style="font-size: 12px; font-weight: 700;">Заголовок п'ятого рівня</h5>
+                        </div>
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">H6 - 10px, 700</p>
+                            <h6 style="font-size: 10px; font-weight: 700;">Заголовок шостого рівня</h6>
+                        </div>
+                        <div>
+                            <p class="text-sm text-dark-gray mb-2">P - 14px, 400</p>
+                            <p style="font-size: 14px; font-weight: 400;">Це приклад абзацу тексту, який демонструє використання шрифту Roboto Slab з розміром 14px та вагою 400. Цей шрифт ідеально підходить для основного тексту на сайті, забезпечуючи хорошу читабельність та приємний зовнішній вигляд.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="mt-8 bg-light-gray p-6 rounded-lg">
                 <h3 class="text-xl mb-4 font-bold">Правила використання шрифтів</h3>
@@ -512,8 +510,8 @@
     <footer class="bg-black py-8 text-white">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-4 banner text-2xl text-brand-primary">TEA-REX</div>
-            <p class="text-sm">Стайлгайд для бренду чаю Tea-Rex.com.ua</p>
-            <p class="text-xs mt-4">©Tea-Rex.com.ua. Всі права захищені.</p>
+            <p class="text-sm">Стайлгайд для бренду Tea-Rex.com.ua</p>
+            <p class="text-xs mt-4">©Tea-Rex.com.ua | Всі права захищені.</p>
         </div>
     </footer>
 </body>
