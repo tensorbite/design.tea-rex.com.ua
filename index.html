@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea-Rex.com.ua Styleguide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#FC4E4D',
+                        'brand-light': '#FD6B6A',
+                        'brand-dark': '#EC3F3E',
+                        'black': '#000000',
+                        'dark-gray': '#525252',
+                        'light-gray': '#F8F8F8',
+                    },
+                    fontFamily: {
+                        'rubik': ['Rubik', 'sans-serif'],
+                        'roboto-slab': ['Roboto Slab', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+            color: #000000;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+        }
+        .banner, .caption {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 700;
+        }
+        .color-box {
+            width: 100%;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #F8F8F8;
+        }
+        .safe-area {
+            border: 2px dashed #FC4E4D;
+            padding: 40px;
+            margin: 15px auto;
+            max-width: 400px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Хедер -->
+    <header class="bg-brand-primary py-6">
+        <div class="container mx-auto px-4">
+            <h1 class="text-white text-4xl font-bold text-center">Tea-Rex Branding</h1>
+        </div>
+    </header>
+
+    <!-- Основний контент -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- Секція кольорів -->
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6 font-bold">Кольори</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <div class="color-box" style="background-color: #FC4E4D;"></div>
+                    <p class="font-bold">Основний колір бренду</p>
+                    <p class="text-dark-gray">#FC4E4D</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background-color: #FD6B6A;"></div>
+                    <p class="font-bold">Світлий альтернативний колір</p>
+                    <p class="text-dark-gray">#FD6B6A</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background-color: #EC3F3E;"></div>
+                    <p class="font-bold">Темний альтернативний колір</p>
+                    <p class="text-dark-gray">#EC3F3E</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background-color: #000000;"></div>
+                    <p class="font-bold">Чорний колір</p>
+                    <p class="text-dark-gray">#000000</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background-color: #525252;"></div>
+                    <p class="font-bold">Темно-сірий</p>
+                    <p class="text-dark-gray">#525252</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background-color: #F8F8F8;"></div>
+                    <p class="font-bold">Світло-сірий</p>
+                    <p class="text-dark-gray">#F8F8F8</p>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-light-gray p-6 rounded-lg">
+                <h3 class="text-xl mb-4 font-bold">Правила використання кольорів</h3>
+                <ol class="list-decimal pl-6">
+                    <li class="mb-2"><strong>Основний колір бренду</strong> — коралово-червоний (#FC4E4D), використовуйте його для головних елементів дизайну.</li>
+                    <li class="mb-2"><strong>Світлий альтернативний колір</strong> (#FD6B6A) застосовуйте для виділення та другорядних елементів.</li>
+                    <li class="mb-2"><strong>Темний альтернативний колір</strong> (#EC3F3E) використовуйте для акцентування та кнопок дії.</li>
+                    <li class="mb-2"><strong>Чорний колір</strong> (#000000) обов'язковий для основного тексту та заголовків.</li>
+                    <li class="mb-2"><strong>Темно-сірий</strong> (#525252) застосовуйте для допоміжного тексту та дрібних елементів.</li>
+                    <li class="mb-2"><strong>Світло-сірий</strong> (#F8F8F8) використовуйте для фонових блоків та розділювачів.</li>
+                    <li class="mb-2">Логотип завжди використовується в оригінальних кольорах (коралово-червоний з зеленим динозавром).</li>
+                    <li class="mb-2">Дотримуйтесь єдиної кольорової гами на всіх рекламних матеріалах та сторінках сайту.</li>
+                    <li class="mb-2">Елементи розпродажу відображайте виключно червоними мітками на контрастному фоні.</li>
+                    <li class="mb-2">При розробці нових елементів дизайну обов'язково враховуйте співвідношення основного та альтернативних кольорів для збереження цілісності бренду.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Секція шрифтів -->
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6 font-bold">Шрифти</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Використання</th>
+                        <th>Шрифт</th>
+                        <th>Розмір</th>
+                        <th>Вага</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Banner</strong></td>
+                        <td><span class="banner">Rubik Bold</span></td>
+                        <td>~</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Caption</strong></td>
+                        <td><span class="caption">Rubik Bold</span></td>
+                        <td>~</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>P</td>
+                        <td>Roboto Slab</td>
+                        <td>14px</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>H1</td>
+                        <td>Roboto Slab</td>
+                        <td>32px</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>H2</td>
+                        <td>Roboto Slab</td>
+                        <td>21px</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>H3</td>
+                        <td>Roboto Slab</td>
+                        <td>16px</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>H4</td>
+                        <td>Roboto Slab</td>
+                        <td>14px</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>H5</td>
+                        <td>Roboto Slab</td>
+                        <td>12px</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>H6</td>
+                        <td>Roboto Slab</td>
+                        <td>10px</td>
+                        <td>700</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mt-8 bg-light-gray p-6 rounded-lg">
+                <h3 class="text-xl mb-4 font-bold">Правила використання шрифтів</h3>
+                <ol class="list-decimal pl-6">
+                    <li class="mb-2"><strong>Заголовки та акценти</strong>: Використовуйте Rubik Bold для всіх головних заголовків сторінок та банерів, щоб створити потужний візуальний вплив.</li>
+                    <li class="mb-2"><strong>Відеоконтент і соцмережі</strong>: Для текстових накладань у відео (Instagram, TikTok, рекламні матеріали) використовуйте виключно Caption (Rubik Bold), вагою 700 для максимальної читабельності.</li>
+                    <li class="mb-2"><strong>Ієрархія тексту</strong>: Дотримуйтесь чіткої ієрархії від H1 (32px) до H6 (10px) для всього текстового контенту сайту, використовуючи Roboto Slab з відповідною вагою.</li>
+                    <li class="mb-2"><strong>Основний текст</strong>: Для абзаців та описів товарів завжди використовуйте Roboto Slab 14px, це забезпечить легке читання на всіх пристроях.</li>
+                    <li class="mb-2"><strong>Консистентність</strong>: Не змішуйте додаткові шрифти окрім визначених Rubik Bold та Roboto Slab у рамках одного проекту чи сторінки.</li>
+                </ol>
+            </div>
+        </section>
+        
+        <!-- Секція логотипу -->
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6 font-bold">Логотип</h2>
+            
+            <div class="bg-light-gray p-6 rounded-lg">
+                <h3 class="text-xl mb-4 font-bold">Правила використання логотипу</h3>
+                <ol class="list-decimal pl-6">
+                    <li class="mb-2"><strong>Збереження пропорцій:</strong> Забороняється розтягувати, стискати або деформувати логотип будь-яким чином. Співвідношення сторін повинно залишатися постійним незалежно від розміру.</li>
+                    <li class="mb-2"><strong>Безпечна зона</strong>: Навколо логотипу слід завжди залишати вільний простір, що дорівнює висоті літери "T" в слові "Tea-Rex". Жодні елементи дизайну не повинні потрапляти в цю зону.</li>
+                    <li class="mb-2"><strong>Кольорова відповідність</strong>: Для світлого фону використовуйте темну версію логотипу, для темного фону — світлу версію. Забороняється змінювати кольорову гаму логотипу або використовувати градієнти.</li>
+                    <li class="mb-2"><strong>Цілісність елементів</strong>: Забороняється видаляти, додавати або змінювати будь-які елементи логотипу (динозавр, чайник, текстова частина). Логотип повинен використовуватися тільки як єдине ціле.</li>
+                    <li class="mb-2"><strong>Мінімальний розмір:</strong> Для збереження розпізнаваності логотип не повинен використовуватися в розмірі меншому ніж 20 мм у ширину для друкованих матеріалів та не менше 10% від ширини екрану для цифрових носіїв.</li>
+                </ol>
+            </div>
+        </section>
+        
+        <!-- Приклад застосування -->
+        <section class="mb-12">
+            <h2 class="text-2xl mb-6 font-bold">Приклад елементів дизайну</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl mb-4 font-bold">Кнопка дії</h3>
+                    <button class="bg-brand-primary hover:bg-brand-dark text-white py-2 px-4 rounded banner">
+                        Замовити чай
+                    </button>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl mb-4 font-bold">Заголовок продукту</h3>
+                    <h2 class="text-xl font-bold mb-2">Шу Пуер "Золота квітка"</h2>
+                    <p class="text-dark-gray">Зрілий, ароматний чай із глибоким смаком</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl mb-4 font-bold">Картка товару</h3>
+                    <div class="bg-light-gray p-4 rounded">
+                        <div class="bg-white mb-3" style="height: 120px; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-dark-gray">Зображення товару</span>
+                        </div>
+                        <h4 class="font-bold mb-1">Улун Те Гуань Інь</h4>
+                        <p class="text-dark-gray text-sm mb-3">Класичний китайський улун</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold">350 грн</span>
+                            <button class="bg-brand-dark text-white py-1 px-3 rounded text-sm">В кошик</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl mb-4 font-bold">Інформаційний блок</h3>
+                    <div class="border-l-4 border-brand-primary pl-4">
+                        <h4 class="font-bold mb-2">Зберігання чаю</h4>
+                        <p class="text-dark-gray text-sm">Зберігайте чай у сухому, темному місці, подалі від сильних запахів. Ідеальна температура: 18-22°C.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-black py-8 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4 banner text-2xl text-brand-primary">TEA-REX</div>
+            <p class="text-sm">Стайлгайд для бренду чаю Tea-Rex.com.ua</p>
+            <p class="text-xs mt-4">©Tea-Rex.com.ua. Всі права захищені.</p>
+        </div>
+    </footer>
+</body>
+</html>
