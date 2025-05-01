@@ -181,6 +181,43 @@
             font-family: monospace;
             font-size: 0.9em;
         }
+        /* Add SVG pattern styles */
+        .complex-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        .complex-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='%231a1a1a'/%3E%3Cpath d='M0 0h50v50H0z' fill='%23FC4E4D'/%3E%3Cpath d='M50 50h50v50H50z' fill='%23FC4E4D'/%3E%3Cpath d='M25 25h50v50H25z' fill='%23ffffff'/%3E%3Cpath d='M0 50h100v50H0z' fill='%23333'/%3E%3Cpath d='M0 0l100 100M100 0L0 100' stroke='%23ffffff' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%23FD6B6A'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23ffffff'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .complex-bg-light {
+            position: relative;
+            overflow: hidden;
+        }
+        .complex-bg-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='%23f5f5f5'/%3E%3Cpath d='M0 0h50v50H0z' fill='%23FC4E4D'/%3E%3Cpath d='M50 50h50v50H50z' fill='%23FC4E4D'/%3E%3Cpath d='M25 25h50v50H25z' fill='%23000'/%3E%3Cpath d='M0 50h100v50H0z' fill='%23e0e0e0'/%3E%3Cpath d='M0 0l100 100M100 0L0 100' stroke='%23000' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%23FD6B6A'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23000'/%3E%3C/svg%3E");
+            background-size: 50px 50px;
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .complex-bg-content {
+            position: relative;
+            z-index: 1;
+        }
     </style>
     <script>
         // Intersection Observer for section highlighting
@@ -409,17 +446,29 @@
                     <div class="mb-8">
                         <h5 class="text-lg mb-3 font-bold">Складний темний фон</h5>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="p-6 rounded-lg" style="background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);">
-                                <p class="banner text-3xl text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); paint-order: stroke; -webkit-text-stroke: 6px #FC4E4D; text-stroke: 6px #FC4E4D;">Tea-Rex</p>
-                                <p class="text-sm text-light-gray mt-2">Білий текст з обводкою основного кольору</p>
+                            <div>
+                                <div class="p-6 rounded-lg complex-bg h-32 flex items-center justify-center">
+                                    <div class="complex-bg-content">
+                                        <p class="banner text-4xl text-white text-center" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); paint-order: stroke; -webkit-text-stroke: 6px #FC4E4D; text-stroke: 6px #FC4E4D;">Tea-Rex</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-dark-gray mt-2 text-center">Білий текст з обводкою основного кольору</p>
                             </div>
-                            <div class="p-6 rounded-lg" style="background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);">
-                                <p class="banner text-3xl text-brand-primary" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); paint-order: stroke; -webkit-text-stroke: 6px white; text-stroke: 6px white;">Tea-Rex</p>
-                                <p class="text-sm text-light-gray mt-2">Основний колір з білою обводкою</p>
+                            <div>
+                                <div class="p-6 rounded-lg complex-bg h-32 flex items-center justify-center">
+                                    <div class="complex-bg-content">
+                                        <p class="banner text-4xl text-brand-primary text-center" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); paint-order: stroke; -webkit-text-stroke: 6px white; text-stroke: 6px white;">Tea-Rex</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-dark-gray mt-2 text-center">Основний колір з білою обводкою</p>
                             </div>
-                            <div class="p-6 rounded-lg" style="background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);">
-                                <p class="banner text-3xl text-black" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); paint-order: stroke; -webkit-text-stroke: 6px white; text-stroke: 6px white;">Tea-Rex</p>
-                                <p class="text-sm text-light-gray mt-2">Чорний текст з білою обводкою</p>
+                            <div>
+                                <div class="p-6 rounded-lg complex-bg h-32 flex items-center justify-center">
+                                    <div class="complex-bg-content">
+                                        <p class="banner text-4xl text-black text-center" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5); paint-order: stroke; -webkit-text-stroke: 6px white; text-stroke: 6px white;">Tea-Rex</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-dark-gray mt-2 text-center">Чорний текст з білою обводкою</p>
                             </div>
                         </div>
                     </div>
@@ -428,17 +477,29 @@
                     <div class="mb-8">
                         <h5 class="text-lg mb-3 font-bold">Складний світлий фон</h5>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="p-6 rounded-lg" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);">
-                                <p class="banner text-3xl text-brand-primary" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1); paint-order: stroke; -webkit-text-stroke: 6px black; text-stroke: 6px black;">Tea-Rex</p>
-                                <p class="text-sm text-dark-gray mt-2">Основний колір з чорною обводкою</p>
+                            <div>
+                                <div class="p-6 rounded-lg complex-bg-light h-32 flex items-center justify-center">
+                                    <div class="complex-bg-content">
+                                        <p class="banner text-4xl text-brand-primary text-center" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1); paint-order: stroke; -webkit-text-stroke: 6px black; text-stroke: 6px black;">Tea-Rex</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-dark-gray mt-2 text-center">Основний колір з чорною обводкою</p>
                             </div>
-                            <div class="p-6 rounded-lg" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);">
-                                <p class="banner text-3xl text-black" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1); paint-order: stroke; -webkit-text-stroke: 6px #FC4E4D; text-stroke: 6px #FC4E4D;">Tea-Rex</p>
-                                <p class="text-sm text-dark-gray mt-2">Чорний текст з обводкою основного кольору</p>
+                            <div>
+                                <div class="p-6 rounded-lg complex-bg-light h-32 flex items-center justify-center">
+                                    <div class="complex-bg-content">
+                                        <p class="banner text-4xl text-black text-center" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1); paint-order: stroke; -webkit-text-stroke: 6px #FC4E4D; text-stroke: 6px #FC4E4D;">Tea-Rex</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-dark-gray mt-2 text-center">Чорний текст з обводкою основного кольору</p>
                             </div>
-                            <div class="p-6 rounded-lg" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);">
-                                <p class="banner text-3xl text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1); paint-order: stroke; -webkit-text-stroke: 6px black; text-stroke: 6px black;">Tea-Rex</p>
-                                <p class="text-sm text-dark-gray mt-2">Білий текст з чорною обводкою</p>
+                            <div>
+                                <div class="p-6 rounded-lg complex-bg-light h-32 flex items-center justify-center">
+                                    <div class="complex-bg-content">
+                                        <p class="banner text-4xl text-white text-center" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1); paint-order: stroke; -webkit-text-stroke: 6px black; text-stroke: 6px black;">Tea-Rex</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-dark-gray mt-2 text-center">Білий текст з чорною обводкою</p>
                             </div>
                         </div>
                     </div>
